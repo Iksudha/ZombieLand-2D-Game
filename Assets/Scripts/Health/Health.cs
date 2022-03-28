@@ -68,6 +68,7 @@ public class Health : MonoBehaviour
     }
 
     private void Deactivate(){
+        ZombieCounter.zombieAmount += 1;
         gameObject.SetActive(false);
     }
 }

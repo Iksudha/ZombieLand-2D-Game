@@ -54,6 +54,8 @@ public class PlayerMovement : MonoBehaviour
             wallJumpCooldown += Time.deltaTime;
     }
 
+
+
     private void Jump()
     {
         if (isGrounded())
@@ -91,4 +93,7 @@ public class PlayerMovement : MonoBehaviour
     {
         return horizontalInput == 0 && isGrounded() && !onWall();
     }
+
+
+
 }
