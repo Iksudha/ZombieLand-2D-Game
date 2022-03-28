@@ -7,6 +7,8 @@ public class Zombie2 : MonoBehaviour
     [SerializeField] private float attackCooldown;
     [SerializeField] private float range;
     [SerializeField] private int damage;
+     [SerializeField] private AudioClip zombieAttack;
+     
 
     [Header("Collider Parameters")]
     [SerializeField] private float colliderDistance;
@@ -36,6 +38,7 @@ public class Zombie2 : MonoBehaviour
         {
             if (cooldownTimer >= attackCooldown)
             {
+                SoundManager.instance.PlaySound(zombieAttack);
                 cooldownTimer = 0;
                 anim.SetTrigger("attack");
             }
